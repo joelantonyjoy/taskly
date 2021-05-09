@@ -1,0 +1,23 @@
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 8px 0;
+    padding: 8px 16px;
+    width: 400px;
+}
+.done{
+    background: #BD0000;
+    color: #ffffff;
+}
+.notDone{
+    background: #19F2BE;
+    color: #000000;
+}
