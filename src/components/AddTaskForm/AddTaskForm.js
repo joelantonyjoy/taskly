@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import styles from './AddTaskForm.module.css';
-// import {v4 as uuidv4} from 'uuid';
+import {v4 as uuidv4} from 'uuid';
 import {TaskContext} from '../../contexts/TaskContext';
 
 
@@ -8,13 +8,19 @@ const AddTaskForm = () => {
     const [task, setTask] = useState({
         name: '',
         points: '',
+        isDone: false,
     });
     const [tasks, setTasks] = useContext(TaskContext);
 
     const addNewTask = (e) =>{
         e.preventDefault();
-        console.log(tasks,task);
-        setTasks(previousTasks=>[...previousTasks,task]);
+        setTasks(previousTasks=>[...previousTasks,{...task,id:uuidv4()}]);
+        setTask(task=>({
+            ...task,
+            name: '',
+            points: '',
+        }))
+        // console.log(tasks);
     }
 
     const handleNameInputChange = (event) => {
@@ -35,8 +41,8 @@ const AddTaskForm = () => {
         <form onSubmit={(e)=>addNewTask(e)}>
             <h1>Add New Task</h1>
             <div className={styles.inputGroup}>
-                <input name='name' type='text' placeholder='Task name' value={task.name} onChange={handleNameInputChange}></input>
-                <input name='points' type='number' placeholder='Task points' value={task.points} onChange={handlePointsInputChange}></input>
+                <input name='name' type='text' placeholder='Task name' value={task.name} onChange={handleNameInputChange} required></input>
+                <input name='points' type='number' placeholder='Task points' value={task.points} onChange={handlePointsInputChange} required></input>
             </div>
             <button>
                 Create Task

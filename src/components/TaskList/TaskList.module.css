@@ -22,3 +22,10 @@ li{
     background: #19F2BE;
     color: #000000;
 }
+.noTask{
+    padding: 16px;
+    margin:16px;
+    width: 400px;
+    text-align: center;
+    border: 1px dashed #19F2BE;
+}
