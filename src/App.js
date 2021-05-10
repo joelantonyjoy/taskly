@@ -1,6 +1,7 @@
 import './App.css';
 import ProfileCard from './components/ProfileCard/ProfileCard';
 import TaskList from './components/TaskList/TaskList';
+import AddTaskForm from './components/AddTaskForm/AddTaskForm';
 import {TaskProvider} from './contexts/TaskContext';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
           <TaskProvider>
             <ProfileCard></ProfileCard>
             <TaskList></TaskList>
+            <AddTaskForm></AddTaskForm>
           </TaskProvider>
       </div>
   );

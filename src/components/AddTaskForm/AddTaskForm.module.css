@@ -1,0 +1,25 @@
+.inputGroup{
+    display: flex;
+    width: 432px;
+    justify-content: space-between;
+    font-family: poppins-regular;
+}
+.inputGroup input:nth-child(1){
+   width: 60%;
+}
+.inputGroup input:nth-child(2){
+    width: 25%;
+    margin-left:16px;
+ }
+input{
+    font-size: 16px;
+    padding: 8px 16px;
+}
+button{
+    margin-top: 16px;
+    font-size: 16px;
+    background-color: #19F2BE;
+    padding: 16px 32px;
+    border: none;
+    width: 100%;
+}

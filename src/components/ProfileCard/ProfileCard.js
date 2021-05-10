@@ -6,14 +6,13 @@ const ProfileCard = () =>{
   const [tasks, setTasks] = useState(useContext(TaskContext));
   const [completedTasks, setCompletedTasks] = useState(tasks.filter((a) => {return a.isDone === true}));
   let completedTasksPoints = completedTasks.map(a=>a.points);
-  let totalPoints = completedTasksPoints.length === 0? 0 : completedTasksPoints.reduce((a,b)=>a+b)
-  console.log(completedTasksPoints);
+  let totalPoints = completedTasksPoints.length === 0? 0 : completedTasksPoints.reduce((a,b)=>a+b);
     return(
         <div className={styles.profile}>
           <img alt='user' src={user}/>
           <span className={styles.userName}>Maria</span>
           <span className={styles.userPoints}>
-            {totalPoints} points</span>
+            {totalPoints} {totalPoints>1?'points':'point'}</span>
         </div> 
     );
 }

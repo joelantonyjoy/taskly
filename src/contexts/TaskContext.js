@@ -8,17 +8,19 @@ export const TaskProvider = (props) => {
             {   
                 name:'Getup Early',
                 points:1,
-                isDone:true
+                isDone:true,
+                id:1
             },
             {
                 name:'Sleep Early',
                 points:2,
-                isDone:false
+                isDone:false,
+                id:2
             }
         ]
     )
     return(
-        <TaskContext.Provider value={tasks}>
+        <TaskContext.Provider value={[tasks,setTasks]}>
             {props.children}
         </TaskContext.Provider>
     )
