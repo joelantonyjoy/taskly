@@ -19,6 +19,7 @@
 } 
 
 body {
+  background-color: #F5F5F5;
   margin: 0;
   font-family: poppins-regular; 
   -webkit-font-smoothing: antialiased;

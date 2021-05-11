@@ -13,6 +13,7 @@ li{
     padding: 8px 16px;
     width: 400px;
     cursor: pointer;
+    transition: 0.3s ease-out;
 }
 .done{
     background: #BD0000;
@@ -20,7 +21,7 @@ li{
 }
 .notDone{
     background: #19F2BE;
-    color: #000000;
+    color: #4d4343;
 }
 .noTask{
     padding: 16px;
