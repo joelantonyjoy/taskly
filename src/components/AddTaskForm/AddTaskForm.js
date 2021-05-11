@@ -3,13 +3,14 @@ import styles from './AddTaskForm.module.css';
 import {v4 as uuidv4} from 'uuid';
 import {TaskContext} from '../../contexts/TaskContext';
 
-
 const AddTaskForm = () => {
+    
     const [task, setTask] = useState({
         name: '',
         points: '',
         isDone: false,
     });
+
     const [tasks, setTasks] = useContext(TaskContext);
 
     const addNewTask = (e) =>{
@@ -20,7 +21,6 @@ const AddTaskForm = () => {
             name: '',
             points: '',
         }))
-        // console.log(tasks);
     }
 
     const handleNameInputChange = (event) => {
@@ -33,7 +33,7 @@ const AddTaskForm = () => {
     const handlePointsInputChange = (event) => {
         setTask((task) => ({
             ...task,
-            points : event.target.value,
+            points : +event.target.value,
         }));
     }
 
@@ -41,7 +41,7 @@ const AddTaskForm = () => {
         <form onSubmit={(e)=>addNewTask(e)}>
             <h1>Add New Task</h1>
             <div className={styles.inputGroup}>
-                <input name='name' type='text' placeholder='Task name' value={task.name} onChange={handleNameInputChange} required></input>
+                <input autocomplete='off' name='name' type='text' placeholder='Task name' value={task.name} onChange={handleNameInputChange} required></input>
                 <input name='points' type='number' placeholder='Task points' value={task.points} onChange={handlePointsInputChange} required></input>
             </div>
             <button>
