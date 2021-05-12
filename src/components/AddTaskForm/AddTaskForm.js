@@ -39,7 +39,7 @@ const AddTaskForm = () => {
 
     return(
         <form onSubmit={(e)=>addNewTask(e)}>
-            <h1>Add New Task</h1>
+            <h1 className={styles.heading}>Add New Task</h1>
             <div className={styles.inputGroup}>
                 <input autocomplete='off' name='name' type='text' placeholder='Task name' value={task.name} onChange={handleNameInputChange} required></input>
                 <input name='points' type='number' placeholder='Task points' value={task.points} onChange={handlePointsInputChange} required></input>

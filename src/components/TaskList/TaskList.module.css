@@ -30,3 +30,14 @@ li{
     text-align: center;
     border: 1px dashed #19F2BE;
 }
+
+@media screen and (max-width:320px){
+li{
+    width: 256px;
+}
+.noTask{
+    width: 288px;
+    padding: 16px 0px;
+    margin: auto;
+}
+}

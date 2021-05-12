@@ -3,8 +3,9 @@
     width: 432px;
     justify-content: space-between;
     font-family: poppins-regular;
+    margin-bottom: 16px;
 }
-h1{
+.heading{
     font-family: poppins-bold;
 }
 .inputGroup input:nth-child(1){
@@ -23,7 +24,7 @@ input{
     background-color: #DFDFDF;
 }
 button{
-    margin: 16px 0;
+    margin: 0px 0 16px;
     font-size: 16px;
     background-color: #19F2BE;
     padding: 16px 32px;
@@ -36,3 +37,27 @@ button:hover{
     color: #ffffff;
     transition: 0.3s ease;
 }
+
+@media screen and (max-width:320px){
+    .heading{
+        font-size: 24px;
+        margin: 0;
+    }
+    .inputGroup{
+        width: 288px;
+        padding: 16px 0px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    .inputGroup input:nth-child(1){
+        width: 272px;
+        padding: 0px 8px;
+     }
+     .inputGroup input:nth-child(2){
+        width: 272px;
+        margin: 16px 0;
+        padding: 0px 8px;
+        margin-left: 0px;
+      }
+    }
