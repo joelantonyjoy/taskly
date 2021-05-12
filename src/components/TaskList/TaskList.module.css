@@ -31,7 +31,7 @@ li{
     border: 1px dashed #19F2BE;
 }
 
-@media screen and (max-width:320px){
+@media screen and (max-width:425px){
 li{
     width: 256px;
 }
